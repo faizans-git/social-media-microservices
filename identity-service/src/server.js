@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const connectDB = require("../db/connectToDb");
 const helmet = require("helmet");
 const { RateLimiterRedis } = require("rate-limiter-flexible");
@@ -9,7 +10,6 @@ const logger = require("./utils/logger");
 const { RedisStore } = require("rate-limit-redis");
 const router = require("./routes/identity-service");
 const errorHandler = require("./middleware/errorHandler");
-require("dotenv").config();
 
 const app = express();
 
