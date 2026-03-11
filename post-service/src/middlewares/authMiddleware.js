@@ -1,6 +1,6 @@
 const logger = require("../utils/logger");
 const authenticateRequest = (req, res, next) => {
-  const userId = req.headers["x-user-id"];
+  const userId = req.get("x-user-id");
 
   if (!userId) {
     logger.warn(`Access attemptedd without user Id `);

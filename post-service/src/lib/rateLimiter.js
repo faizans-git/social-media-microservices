@@ -1,4 +1,4 @@
-const redisClient = require("../../db/connectToRedis");
+const redisClient = require("../db/connectToRedis");
 const { RateLimiterRedis } = require("rate-limiter-flexible");
 const { RedisStore } = require("rate-limit-redis");
 

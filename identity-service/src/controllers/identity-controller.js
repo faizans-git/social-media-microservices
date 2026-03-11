@@ -10,7 +10,6 @@ const RefreshToken = require("../models/RefreshToken.js");
 const registerUser = async (req, res) => {
   logger.info(" User Registration endpoint hit");
   try {
-    // makes sure data is valid (schema)
     const { error } = validateRegistration(req.body);
     if (error) {
       logger.warn("Validation Error", error.details[0].message);

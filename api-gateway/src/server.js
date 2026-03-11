@@ -6,6 +6,7 @@ const { rateLimiter } = require("./middleware/Ratelimiter");
 const proxy = require("express-http-proxy");
 const logger = require("./utils/logger");
 const errorHandler = require("./middleware/errorHandler");
+const validateToken = require("./middleware/authmiddleware");
 
 const app = express();
 
@@ -31,13 +32,34 @@ app.use(
   "/v1/auth",
   proxy(process.env.IDENTITY_SERVICE_URL, {
     ...proxyOptions,
-    proxyReqOptDecorator: (proxyReqOpts, srReq) => {
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
       proxyReqOpts.headers["content-type"] = "application/json";
       return proxyReqOpts;
     },
     userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
       logger.info(
         `Response received from identity service : ${proxyRes.statusCode}`,
+      );
+      return proxyResData;
+    },
+  }),
+);
+
+// setting up proxy for post service
+app.use(
+  "/v1/post",
+  validateToken,
+  proxy(process.env.POST_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["content-type"] = "application/json";
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from post service : ${proxyRes.statusCode}`,
       );
       return proxyResData;
     },
@@ -51,4 +73,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   logger.info(`Api Gateway is Runnning on: ${PORT}`);
   logger.info(`Identity service ${process.env.IDENTITY_SERVICE_URL}`);
+  logger.info(`Post service ${process.env.POST_SERVICE_URL}`);
 });
