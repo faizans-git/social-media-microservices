@@ -5,7 +5,7 @@ const { RedisStore } = require("rate-limit-redis");
 const rateLimiter = new RateLimiterRedis({
   storeClient: redisClient,
   keyPrefix: "middleware",
-  points: 5,
+  points: 100,
   duration: 1,
 });
 

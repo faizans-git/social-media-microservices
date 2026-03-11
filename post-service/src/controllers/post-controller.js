@@ -1,6 +1,7 @@
 const Post = require("../models/Post");
 const logger = require("../utils/logger");
 const redisClient = require("../db/connectToRedis");
+const { invalidatePostCache } = require("../utils/cacheControllers");
 
 const createPost = async (req, res) => {
   try {
@@ -21,7 +22,10 @@ const createPost = async (req, res) => {
     });
     await newlyCreatedPost.save();
 
+    await invalidatePostCache();
+
     logger.info("Post created successfully", newlyCreatedPost);
+
     return res.status(201).json({
       success: true,
       message: "Post created successfully",
@@ -31,7 +35,7 @@ const createPost = async (req, res) => {
 
     return res.status(500).json({
       success: false,
-      message: "Error ocuured while creating the post",
+      message: "Error ocuured while creating posts",
     });
   }
 };
@@ -80,17 +84,55 @@ const getAllPosts = async (req, res) => {
 
 const getPost = async (req, res) => {
   try {
+    const postId = req.params.id;
+    const cacheKey = `post:${postId}`;
+
+    const cachedPost = await redisClient.get(cacheKey);
+    if (cachedPost) {
+      return res.json(JSON.parse(cachedPost));
+    }
+
+    const singlePostById = await Post.findById(postId);
+
+    if (!singlePostById) {
+      return res.status(404).json({
+        success: false,
+        message: "Post not found",
+      });
+    }
+
+    await redisClient.setex(cacheKey, 3600, JSON.stringify(singlePostById));
+
+    res.status(200).json(singlePostById);
   } catch (error) {
     logger.error("Error retrieving post", error);
     return res.status(500).json({
       success: false,
-      message: "Error ocuured while retrieving the posts",
+      message: "Error ocuured while retrieving the post",
     });
   }
 };
 
 const deletePost = async (req, res) => {
   try {
+    const post = await Post.findOneAndDelete({
+      _id: req.params.id,
+      user: req.user.userId,
+    });
+
+    if (!post) {
+      return res.status(404).json({
+        success: false,
+        message: "Post not found",
+      });
+    }
+
+    await Promise.all([
+      Post.deleteOne({ _id: post._id }),
+      invalidatePostCache(post._id),
+    ]);
+
+    res.json({ message: "meow" });
   } catch (error) {
     logger.error("Error retrieving post", error);
     return res.status(500).json({

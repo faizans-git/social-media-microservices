@@ -9,7 +9,7 @@ const rateLimiterMiddleware = async (req, res, next) => {
     logger.warn(`Rate limit exceeded for ip:${req.ip}`);
     return res
       .status(429)
-      .json({ success: false, message: "Too many requests" });
+      .json({ success: false, message: "Too manyndgmns,fd requests" });
   }
 };
 

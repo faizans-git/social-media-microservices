@@ -16,7 +16,7 @@ app.use(cors());
 app.use(helmet());
 
 app.use(rateLimiterMiddleware);
-app.use("/api/post", sensitiveEndpointLimiter, postRoutes);
+app.use("/api/post", postRoutes);
 
 app.use(errorHandler);
 

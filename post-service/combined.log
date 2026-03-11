@@ -111,3 +111,212 @@
 {"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T08:36:32.237Z"}
 {"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T08:36:32.281Z"}
 {"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T08:36:34.201Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T09:59:36.218Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T09:59:36.279Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T09:59:39.483Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:00:11.606Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:00:11.971Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:00:13.663Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:01:38.025Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:01:38.042Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:01:40.010Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:01:54.928Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:01:54.992Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:01:56.906Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:03:27.597Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:03:27.609Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:03:30.455Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:03:30.788Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:03:32.953Z"}
+{"_message":"Post validation failed","errors":{"content":{"kind":"required","message":"Path `content` is required.","name":"ValidatorError","path":"content","properties":{"message":"Path `content` is required.","path":"content","type":"required"}}},"level":"error","message":"Error creating post Post validation failed: content: Path `content` is required.","service":"post-gateway","stack":"ValidationError: Post validation failed: content: Path `content` is required.\n    at Document.invalidate (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/document.js:3420:32)\n    at validatePath (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/document.js:3192:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Promise.all (index 0)\n    at async model.$__validate (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/document.js:3133:3)\n    at async model.validate (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/document.js:2702:5)\n    at async model.validateBeforeSavePreSave (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/plugins/validateBeforeSave.js:39:5)\n    at async Kareem.execPre (/Users/faizan/social-media/post-service/node_modules/kareem/index.js:70:24)\n    at async model.$__save (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/model.js:376:5)\n    at async model.save (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/model.js:642:5)","timestamp":"2026-03-11T10:05:46.625Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:06:39.519Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:06:39.536Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:06:41.316Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:06:41.364Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:06:43.148Z"}
+{"_message":"Post validation failed","errors":{"content":{"kind":"required","message":"Path `content` is required.","name":"ValidatorError","path":"content","properties":{"message":"Path `content` is required.","path":"content","type":"required"}}},"level":"error","message":"Error getting all posts Post validation failed: content: Path `content` is required.","service":"post-gateway","stack":"ValidationError: Post validation failed: content: Path `content` is required.\n    at Document.invalidate (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/document.js:3420:32)\n    at validatePath (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/document.js:3192:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Promise.all (index 0)\n    at async model.$__validate (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/document.js:3133:3)\n    at async model.validate (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/document.js:2702:5)\n    at async model.validateBeforeSavePreSave (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/plugins/validateBeforeSave.js:39:5)\n    at async Kareem.execPre (/Users/faizan/social-media/post-service/node_modules/kareem/index.js:70:24)\n    at async model.$__save (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/model.js:376:5)\n    at async model.save (/Users/faizan/social-media/post-service/node_modules/mongoose/lib/model.js:642:5)","timestamp":"2026-03-11T10:06:44.770Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:07:37.534Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:07:37.819Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:07:39.478Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:07:55.192Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:07:55.242Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:07:57.326Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:08:35.223Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:08:36.211Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:10:35.699Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:10:36.514Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:11:53.405Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:11:53.437Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:11:55.336Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:11:57.427Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:11:58.413Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:12:01.759Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:12:01.769Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:12:03.693Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:12:10.578Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:12:10.599Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:12:12.441Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:12:19.231Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:12:29.759Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:12:29.817Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:12:31.622Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:12:36.932Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:12:38.636Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:12:39.848Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:14:01.482Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:14:01.512Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:14:04.549Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:10.764Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:11.326Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:11.738Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:12.010Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:12.285Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:12.624Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:12.883Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:13.087Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:13.282Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:13.444Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:13.707Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:14.094Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:34.034Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:15:34.494Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:15:58.193Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:15:58.221Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:16:00.314Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:16:03.455Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:16:03.471Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:16:05.432Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:17:38.524Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:17:38.558Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:17:40.479Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:17:42.918Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:17:42.932Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:17:44.770Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:18:36.703Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:18:37.677Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:18:58.091Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:20:26.493Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:22:33.534Z"}
+{"level":"warn","message":"Sensitive end point rate limit exceeded for IP: ::1","service":"post-gateway","timestamp":"2026-03-11T10:22:40.080Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:23:11.722Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:23:11.735Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:23:13.816Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:25:36.687Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:25:36.721Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:25:39.082Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:25:39.101Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:25:41.970Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:30:09.347Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:30:09.384Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:30:11.632Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:51:31.432Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:51:31.466Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:51:33.552Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:51:49.244Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:51:49.415Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:51:51.044Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:52:25.405Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:52:25.419Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:52:27.240Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:53:07.465Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:53:07.485Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:53:09.465Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:53:24.172Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:53:24.199Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:53:26.179Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:53:43.339Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:53:43.352Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:53:45.529Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:53:45.544Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:53:49.423Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:54:04.069Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:54:04.090Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:54:05.902Z"}
+{"level":"error","message":"Error creating post redisClient is not defined","service":"post-gateway","stack":"ReferenceError: redisClient is not defined\n    at invalidatePostCache (/Users/faizan/social-media/post-service/src/utils/cacheControllers.js:2:16)\n    at createPost (/Users/faizan/social-media/post-service/src/controllers/post-controller.js:26:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2026-03-11T10:55:42.917Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T10:57:22.491Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T10:57:22.531Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T10:57:24.639Z"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{"content":"require"},"states":{"default":{},"modify":{},"require":{"content":true}}},"backup":{"activePaths":{"default":{"_id":true,"createdAt":true},"modify":{"content":true,"mediaIds":true,"user":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"pathsToScopes":{"mediaIds":{"__v":0,"_id":"69b14a9baf6ff6b3c38e6c1d","content":"Amigacito meowdxdfgvhjk moeow","createdAt":"2026-03-11T10:57:31.362Z","mediaIds":[],"user":"69a306123801eb1ebd256dbc"}},"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"69b14a9baf6ff6b3c38e6c1d","content":"Amigacito meowdxdfgvhjk moeow","createdAt":"2026-03-11T10:57:31.362Z","mediaIds":[],"user":"69a306123801eb1ebd256dbc"},"level":"info","message":"Post created successfully","service":"post-gateway","timestamp":"2026-03-11T10:57:31.544Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:02:02.589Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:02:02.606Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:02:04.748Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:03:57.558Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:03:57.602Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:03:59.698Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:05:17.850Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:05:17.859Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:05:19.997Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:09:30.159Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:09:30.274Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:09:33.014Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:10:03.454Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:10:03.490Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:10:06.061Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:10:15.379Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:10:15.521Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:10:17.453Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:13:40.272Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:13:40.287Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:13:42.303Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:13:57.660Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:13:57.676Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:13:59.784Z"}
+{"level":"error","message":"Error retrieving post singlePost is not defined","service":"post-gateway","stack":"ReferenceError: singlePost is not defined\n    at getPost (/Users/faizan/social-media/post-service/src/controllers/post-controller.js:99:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2026-03-11T11:17:07.453Z"}
+{"level":"error","message":"Error retrieving post singlePost is not defined","service":"post-gateway","stack":"ReferenceError: singlePost is not defined\n    at getPost (/Users/faizan/social-media/post-service/src/controllers/post-controller.js:99:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2026-03-11T11:18:37.989Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:19:29.047Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:19:29.073Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:19:30.953Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T11:22:07.800Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T11:22:07.818Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T11:22:12.615Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T12:53:15.376Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T12:53:15.413Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T12:53:17.559Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T12:53:30.258Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T12:53:30.278Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T12:53:32.090Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T12:54:41.265Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T12:54:41.279Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T12:54:43.430Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T12:55:44.654Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T12:55:44.671Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T12:55:46.186Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T12:55:46.199Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T12:55:48.412Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T12:57:08.021Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T12:57:08.055Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T12:57:10.401Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:16:23.669Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:16:23.682Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:16:25.744Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:16:54.588Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:16:54.730Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:16:56.394Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:20:43.145Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:20:43.160Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:20:45.160Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:21:07.803Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:21:07.904Z"}
+{"code":"EREFUSED","hostname":"_mongodb._tcp.cluster0.uxwfvyh.mongodb.net","level":"error","message":"Mongo Db connection error querySrv EREFUSED _mongodb._tcp.cluster0.uxwfvyh.mongodb.net","service":"post-gateway","stack":"Error: querySrv EREFUSED _mongodb._tcp.cluster0.uxwfvyh.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:291:17)","syscall":"querySrv","timestamp":"2026-03-11T15:21:13.618Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:21:23.921Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:21:23.939Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:21:26.050Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:22:00.219Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:22:00.270Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:22:02.311Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:22:12.158Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:22:12.170Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:22:14.266Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:22:22.957Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:22:23.157Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:22:25.155Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:25:05.397Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:25:05.421Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:25:07.664Z"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{"content":"require"},"states":{"default":{},"modify":{},"require":{"content":true}}},"backup":{"activePaths":{"default":{"_id":true,"createdAt":true},"modify":{"content":true,"mediaIds":true,"user":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"pathsToScopes":{"mediaIds":{"__v":0,"_id":"69b18a9d1a28dc8ff54a17f8","content":"Meow Meow Amigacito meowdxdfgvhjk moeow","createdAt":"2026-03-11T15:30:37.561Z","mediaIds":[],"user":"69a306123801eb1ebd256dbc"}},"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"69b18a9d1a28dc8ff54a17f8","content":"Meow Meow Amigacito meowdxdfgvhjk moeow","createdAt":"2026-03-11T15:30:37.561Z","mediaIds":[],"user":"69a306123801eb1ebd256dbc"},"level":"info","message":"Post created successfully","service":"post-gateway","timestamp":"2026-03-11T15:30:37.778Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:46:55.797Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:46:55.819Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:46:58.748Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:56:38.232Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:56:38.254Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:56:40.338Z"}
