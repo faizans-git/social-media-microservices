@@ -320,3 +320,6 @@
 {"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-11T15:56:38.232Z"}
 {"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-11T15:56:38.254Z"}
 {"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-11T15:56:40.338Z"}
+{"level":"info","message":"Indentity service is running at: 3002","service":"post-gateway","timestamp":"2026-03-12T06:17:56.928Z"}
+{"level":"info","message":"Redis connected","service":"post-gateway","timestamp":"2026-03-12T06:17:56.953Z"}
+{"level":"info","message":"Connected to Db","service":"post-gateway","timestamp":"2026-03-12T06:18:01.568Z"}

@@ -132,7 +132,7 @@ const deletePost = async (req, res) => {
       invalidatePostCache(post._id),
     ]);
 
-    res.json({ message: "meow" });
+    res.json({ message: "post deleted successfully" });
   } catch (error) {
     logger.error("Error retrieving post", error);
     return res.status(500).json({
