@@ -7,7 +7,7 @@ cloudinary.config({
   api_secret: process.env.API_SECRET,
 });
 // clean it
-const uploadMediaToCloudinary = () => {
+const uploadMediaToCloudinary = (file) => {
   return new Promise((resolve, reject) => {
     const uploadStream = cloudinary.uploader.upload_stream(
       {
@@ -15,9 +15,15 @@ const uploadMediaToCloudinary = () => {
       },
       (error, result) => {
         if (error) {
-          lo;
+          logger.error("Error ehile uploading to cloudinary", error);
+          reject(error);
+        } else {
+          resolve(result);
         }
       },
     );
+    uploadStream.end(file.buffer);
   });
 };
+
+module.exports = { uploadMediaToCloudinary };
