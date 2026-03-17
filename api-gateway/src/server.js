@@ -66,12 +66,38 @@ app.use(
   }),
 );
 
+// setting up proxy for post media service
+app.use(
+  "/v1/media",
+  validateToken,
+  proxy(process.env.MEDIA_SERVICE_URL, {
+    ...proxyOptions,
+
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+      return proxyReqOpts;
+    },
+
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from media service : ${proxyRes.statusCode}`,
+      );
+      return proxyResData;
+    },
+
+    parseReqBody: false, // correct for file uploads
+  }),
+);
+
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   logger.info(`Api Gateway is Runnning on: ${PORT}`);
-  logger.info(`Identity service ${process.env.IDENTITY_SERVICE_URL}`);
-  logger.info(`Post service ${process.env.POST_SERVICE_URL}`);
+  logger.info(
+    `Identity service Runnning on: ${process.env.IDENTITY_SERVICE_URL}`,
+  );
+  logger.info(`Post service Runnning on: ${process.env.POST_SERVICE_URL}`);
+  logger.info(`Post service Runnning on: ${process.env.MEDIA_SERVICE_URL}`);
 });

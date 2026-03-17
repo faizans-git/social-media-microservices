@@ -5,30 +5,32 @@ const logger = require("../utils/logger");
 const uploadMedia = async (req, res) => {
   logger.info("Starting media upload");
   try {
+    console.log(req.file, "req.filereq.file");
+
     if (!req.file) {
-      logger.error("No file present.Please add a file and try again later");
+      logger.error("No file found. Please add a file and try again!");
       return res.status(400).json({
         success: false,
-        message: "No file present.Please add a file and try again later",
+        message: "No file found. Please add a file and try again!",
       });
     }
 
-    const { originalName, mimeType, buffer } = req.file;
+    const { originalname, mimetype, buffer } = req.file;
     const userId = req.user.userId;
 
-    logger.info(`File details name=${originalName}, type=${mimeType}`);
-    logger.info("Uploading to cloudinary...........");
+    logger.info(`File details: name=${originalname}, type=${mimetype}`);
+    logger.info("Uploading to cloudinary starting...");
 
-    const cloudinaryResult = await uploadMediaToCloudinary(req.file);
+    const cloudinaryUploadResult = await uploadMediaToCloudinary(req.file);
     logger.info(
-      `Cloudinary upload success Public_id ${cloudinaryResult.public_id}`,
+      `Cloudinary upload successfully. Public Id: - ${cloudinaryUploadResult.public_id}`,
     );
 
     const newlyCreatedMedia = new Media({
-      publicId: cloudinaryResult.public_id,
-      originalName,
-      mimeType,
-      url: cloudinaryResult.secure_url,
+      publicId: cloudinaryUploadResult.public_id,
+      originalName: originalname,
+      mimeType: mimetype,
+      url: cloudinaryUploadResult.secure_url,
       userId,
     });
 
@@ -38,13 +40,13 @@ const uploadMedia = async (req, res) => {
       success: true,
       mediaId: newlyCreatedMedia._id,
       url: newlyCreatedMedia.url,
-      message: "Media uploaded successfully",
+      message: "Media upload is successfully",
     });
   } catch (error) {
-    logger.error("Error while uploading media", error);
-    return res.status(500).json({
+    logger.error("Error creating media", error);
+    res.status(500).json({
       success: false,
-      message: "Error ocuured while uploading media",
+      message: "Error creating media",
     });
   }
 };

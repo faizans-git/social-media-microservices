@@ -19,10 +19,6 @@ const mediaSchema = new mongoose.Schema(
       required: true,
     },
     userId: {
-      type: String,
-      required: true,
-    },
-    mediaId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
@@ -32,4 +28,5 @@ const mediaSchema = new mongoose.Schema(
 );
 
 const Media = mongoose.model("Media", mediaSchema);
+
 module.exports = Media;
