@@ -2,6 +2,7 @@ const Post = require("../models/Post");
 const logger = require("../utils/logger");
 const redisClient = require("../db/connectToRedis");
 const { invalidatePostCache } = require("../utils/cacheControllers");
+const { publishEvent } = require("../utils/rabbitmq");
 
 const createPost = async (req, res) => {
   try {
@@ -130,6 +131,11 @@ const deletePost = async (req, res) => {
     await Promise.all([
       Post.deleteOne({ _id: post._id }),
       invalidatePostCache(post._id),
+      await publishEvent("post.deleted", {
+        postId: post._id.toString(),
+        userId: req.user.userId,
+        mediaIds: post.mediaIds,
+      }),
     ]);
 
     res.json({ message: "post deleted successfully" });

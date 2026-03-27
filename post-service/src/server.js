@@ -8,6 +8,7 @@ const logger = require("./utils/logger");
 const connectDB = require("./db/connectToDb");
 const sensitiveEndpointLimiter = require("./middlewares/sensitiveEndpointLimiter");
 const rateLimiterMiddleware = require("./middlewares/rateLimiter");
+const { connectToRabbitMQ } = require("./utils/rabbitmq");
 
 const app = express();
 
@@ -22,8 +23,17 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 3002;
 
-app.listen(PORT, () => {
-  logger.info(`Indentity service is running at: ${PORT}`);
-});
+async function startServer() {
+  try {
+    await connectToRabbitMQ();
+    app.listen(PORT, () => {
+      logger.info(`Indentity service is running at: ${PORT}`);
+    });
 
-connectDB();
+    connectDB();
+  } catch (err) {
+    logger.error("Failed to establish connection with server", err);
+    process.exit(1);
+  }
+}
+startServer();
