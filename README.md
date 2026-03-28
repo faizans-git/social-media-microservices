@@ -1,6 +1,6 @@
 # Microservices Social Media Platform 🚀
 
-A backend-heavy, microservices-based social media platform currently under active development.
+A backend-heavy, microservices-based social media platform currently that taught me to think beyond monolithic systems.
 
 The system is designed to mimic production-grade architectures with independent services handling core social features such as user management, media uploads, and post interactions.
 
@@ -35,10 +35,10 @@ The system is designed to mimic production-grade architectures with independent 
 
 ## 🚧 Status
 
-This project is currently under active development. Core architecture and service structure are in place, with features being incrementally implemented.
+This project is currently under development. Core architecture and service
 
 ---
 
 ## 🎯 Goal
 
-To build a scalable, production-style social media backend using microservices architecture and real-world system design principles.
+To learn more about event driven microservices based architecture.
