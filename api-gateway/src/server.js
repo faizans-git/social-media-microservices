@@ -52,15 +52,16 @@ app.use(
   proxy(process.env.POST_SERVICE_URL, {
     ...proxyOptions,
     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
-      proxyReqOpts.headers["content-type"] = "application/json";
+      proxyReqOpts.headers["Content-Type"] = "application/json";
       proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
 
       return proxyReqOpts;
     },
     userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
       logger.info(
-        `Response received from post service : ${proxyRes.statusCode}`,
+        `Response received from Post service: ${proxyRes.statusCode}`,
       );
+
       return proxyResData;
     },
   }),
@@ -72,20 +73,43 @@ app.use(
   validateToken,
   proxy(process.env.MEDIA_SERVICE_URL, {
     ...proxyOptions,
-
     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
       proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+      if (!srcReq.headers["content-type"].startsWith("multipart/form-data")) {
+        proxyReqOpts.headers["Content-Type"] = "application/json";
+      }
+
       return proxyReqOpts;
     },
-
     userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
       logger.info(
-        `Response received from media service : ${proxyRes.statusCode}`,
+        `Response received from media service: ${proxyRes.statusCode}`,
+      );
+
+      return proxyResData;
+    },
+    parseReqBody: false,
+  }),
+);
+
+//proxy for search service
+app.use(
+  "/v1/search",
+  validateToken,
+  proxy(process.env.SEARCH_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["content-type"] = "application/json";
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from search service : ${proxyRes.statusCode}`,
       );
       return proxyResData;
     },
-
-    parseReqBody: false, // correct for file uploads
   }),
 );
 
@@ -99,5 +123,6 @@ app.listen(PORT, () => {
     `Identity service Runnning on: ${process.env.IDENTITY_SERVICE_URL}`,
   );
   logger.info(`Post service Runnning on: ${process.env.POST_SERVICE_URL}`);
-  logger.info(`Post service Runnning on: ${process.env.MEDIA_SERVICE_URL}`);
+  logger.info(`Media service Runnning on: ${process.env.MEDIA_SERVICE_URL}`);
+  logger.info(`Search service Runnning on: ${process.env.SEARCH_SERVICE_URL}`);
 });
